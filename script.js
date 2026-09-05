@@ -199,7 +199,7 @@ function loadImage(pageIndex) {
                     _b.label = 1;
                 case 1:
                     _b.trys.push([1, 10, , 11]);
-                    return [4, fetch("/" + PAGE_DATA_LIST[pageIndex].imageFilename, { signal: controller.signal })];
+                    return [4, fetch(PAGE_DATA_LIST[pageIndex].imageFilename, { signal: controller.signal })];
                 case 2:
                     imageRes = _b.sent();
                     if (!(imageRes.ok && controller.signal.aborted === false)) return [3, 8];

@@ -342,7 +342,7 @@ function init() {
         var i;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4, fetch("/page-data-list.json")];
+                case 0: return [4, fetch("page-data-list.json")];
                 case 1: return [4, (_a.sent()).json()];
                 case 2:
                     PAGE_DATA_LIST = _a.sent();

@@ -60,6 +60,7 @@ PAGE_ELMS.imageLink.remove();
 PAGE_ELMS.image.removeAttribute("src");
 PAGE_ELMS.image.remove();
 PAGE_ELMS.anchor.removeAttribute("href");
+var BASE_URL = location.href.substring(0, location.href.lastIndexOf("/") + 1);
 var IMG_CACHES = [];
 var CONTROLERS = new Map();
 var DRAW_QUEUE = [];
@@ -82,7 +83,7 @@ function nav(currentPage) {
                     pageData = PAGE_DATA_LIST[currentPageIndexNow];
                     PAGE_ELMS.title.textContent = pageData.title;
                     if (currentPage === false) {
-                        newUrl = new URL(pageData.htmlFilename, location.href);
+                        newUrl = BASE_URL + pageData.htmlFilename;
                         window.history.pushState({ path: newUrl }, "", newUrl);
                     }
                     PAGE_ELMS.image.alt = pageData.title;
